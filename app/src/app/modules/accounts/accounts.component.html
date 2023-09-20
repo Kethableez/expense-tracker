@@ -1,0 +1,30 @@
+<div class="page-layout">
+  <div class="two-cards">
+    <div class="card">
+      <h2>Create account</h2>
+      <form [formGroup]="accountForm" class="form-group col-12">
+        <ktbz-control
+          [required]="true"
+          label="Account name"
+          [control]="accountForm.controls['name']"
+        ></ktbz-control>
+        <div class="form-group__buttons">
+          <button class="btn btn-primary btn--medium" (click)="createAccount()">
+            Create new
+          </button>
+        </div>
+      </form>
+    </div>
+    <div class="card">
+      <h2>Your accounts</h2>
+      <div class="account-list" *ngIf="accounts$ | async as accounts">
+        <div class="account-row" *ngFor="let account of accounts">
+          <span class="account__name">
+            {{ account["name"] }}
+          </span>
+          <span class="account__currency">{{ account["currency"] }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

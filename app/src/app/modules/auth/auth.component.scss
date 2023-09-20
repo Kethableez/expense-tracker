@@ -1,0 +1,17 @@
+.page-layout {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 992px) {
+  .page-layout {
+    margin-inline: 24px;
+  }
+}
+
+@media screen and (min-width: 993px) {
+  .page-layout {
+    width: 700px;
+    margin-inline: auto;
+  }
+}

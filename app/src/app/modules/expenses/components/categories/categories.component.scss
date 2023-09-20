@@ -1,0 +1,38 @@
+.col-4 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+h2,
+h3 {
+  flex-grow: 1;
+}
+
+.two-cards {
+  display: grid;
+  grid-template-columns: 1.25fr 2fr;
+  gap: 24px;
+}
+
+.form-group {
+  width: 100%;
+}
+
+.category-list {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.category-badge {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 8px;
+  padding: 8px 10px;
+  background-color: var(--neutral-800);
+  border-radius: 8px;
+}

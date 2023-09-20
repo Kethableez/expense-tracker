@@ -1,0 +1,24 @@
+input[type="text"],
+input[type="password"],
+textarea {
+  transition: 0.2s ease-in-out;
+  appearance: none;
+  outline: none;
+  background-color: unset;
+}
+
+@media screen and (max-width: 575px) {
+  input[type="text"],
+  input[type="password"],
+  textarea {
+    font: var(--text-paragraph-small);
+  }
+}
+
+@media screen and (min-width: 576px) {
+  input[type="text"],
+  input[type="password"],
+  textarea {
+    font: var(--text-paragraph-medium);
+  }
+}

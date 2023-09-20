@@ -1,0 +1,174 @@
+<div class="card">
+  <div class="grid">
+    <div class="col-3">
+      <button class="btn btn--small btn-primary" (click)="add('info')">
+        Add info
+      </button>
+    </div>
+
+    <div class="col-3">
+      <button class="btn btn--small btn-primary" (click)="add('warning')">
+        Add warning
+      </button>
+    </div>
+
+    <div class="col-3">
+      <button class="btn btn--small btn-primary" (click)="add('error')">
+        Add error
+      </button>
+    </div>
+
+    <div class="col-3">
+      <button class="btn btn--small btn-primary" (click)="add('success')">
+        Add success
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <h1>Typography</h1>
+  <hr />
+  <h1>Heading 1</h1>
+  <p class="paragraph">
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati
+    voluptates esse soluta. Architecto consequatur nobis vero minus.
+    Voluptatibus hic facere cum numquam, provident ut consequuntur rerum illum
+    quia, dolores velit!
+  </p>
+  <p class="paragraph--small">
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati
+    voluptates esse soluta. Architecto consequatur nobis vero minus.
+    Voluptatibus hic facere cum numquam, provident ut consequuntur rerum illum
+    quia, dolores velit!
+  </p>
+  <span class="label--large">Some label</span>
+  <span class="label--caption">Caption label</span>
+
+  <hr />
+</div>
+
+<div class="card">
+  <h1>Forms</h1>
+  <form [formGroup]="defaultForm" class="form-group">
+    <ktbz-control
+      [control]="defaultForm.controls['prop1']"
+      [label]="'Required control'"
+      [iconName]="'bi-shield'"
+      placeholder="Twoja stara"
+    ></ktbz-control>
+
+    <ktbz-control
+      [control]="defaultForm.controls['prop2']"
+      [label]="'Optional control'"
+      [required]="false"
+      [iconName]="'bi-shield'"
+      placeholder="Dupa"
+    ></ktbz-control>
+  </form>
+  <button class="btn btn--small btn-primary" (click)="disable()">
+    Disable
+  </button>
+</div>
+
+<div class="card">
+  <h1>Buttons</h1>
+  <div class="grid">
+    <div class="col-4">
+      <button [disabled]="true" class="btn btn--small btn-primary">
+        Primary button
+      </button>
+    </div>
+
+    <div class="col-4">
+      <button [disabled]="true" class="btn btn--small btn-secondary">
+        Primary button
+      </button>
+    </div>
+
+    <div class="col-4">
+      <button [disabled]="true" class="btn btn--small btn-tertiary">
+        Primary button
+      </button>
+    </div>
+
+    <div class="col-4">
+      <button class="btn btn--medium btn-primary">Primary button</button>
+    </div>
+
+    <div class="col-4">
+      <button class="btn btn--medium btn-secondary">Primary button</button>
+    </div>
+
+    <div class="col-4">
+      <button class="btn btn--medium btn-tertiary">Primary button</button>
+    </div>
+
+    <div class="col-4">
+      <button class="btn btn--large btn-primary">Primary button</button>
+    </div>
+
+    <div class="col-4">
+      <button class="btn btn--large btn-secondary">Primary button</button>
+    </div>
+
+    <div class="col-4">
+      <button class="btn btn--large btn-tertiary">Primary button</button>
+    </div>
+
+    <!--  -->
+    <div class="col-4">
+      <button class="btn btn--icon btn--small btn-primary">
+        <i class="bi bi-shield"></i>
+      </button>
+    </div>
+
+    <div class="col-4">
+      <button class="btn btn--icon btn--small btn-secondary">
+        <i class="bi bi-shield"></i>
+      </button>
+    </div>
+
+    <div class="col-4">
+      <button class="btn btn--icon btn--small btn-tertiary">
+        <i class="bi bi-shield"></i>
+      </button>
+    </div>
+
+    <div class="col-4">
+      <button class="btn btn--icon btn--medium btn-primary">
+        <i class="bi bi-shield"></i>
+      </button>
+    </div>
+
+    <div class="col-4">
+      <button class="btn btn--icon btn--medium btn-secondary">
+        <i class="bi bi-shield"></i>
+      </button>
+    </div>
+
+    <div class="col-4">
+      <button class="btn btn--icon btn--medium btn-tertiary">
+        <i class="bi bi-shield"></i>
+      </button>
+    </div>
+
+    <div class="col-4">
+      <button class="btn btn--icon btn--large btn-primary">
+        <i class="bi bi-shield"></i>
+      </button>
+    </div>
+
+    <div class="col-4">
+      <button class="btn btn--icon btn--large btn-secondary">
+        <i class="bi bi-shield"></i>
+      </button>
+    </div>
+
+    <div class="col-4">
+      <button class="btn btn--icon btn--large btn-tertiary">
+        <i class="bi bi-shield"></i>
+      </button>
+    </div>
+  </div>
+</div>

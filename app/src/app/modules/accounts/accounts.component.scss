@@ -1,0 +1,29 @@
+.two-cards {
+  display: grid;
+  grid-template-columns: 1.25fr 2fr;
+  gap: 24px;
+}
+
+.account-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.account-row {
+  display: grid;
+  grid-template-columns: 2fr auto 1fr;
+  align-items: center;
+  gap: 16px;
+}
+
+.account {
+  &__name {
+    font: var(--text-label-large);
+  }
+  &__currency {
+    padding: 4px 8px;
+    border-radius: 8px;
+    background-color: var(--neutral-800);
+  }
+}

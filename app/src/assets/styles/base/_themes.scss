@@ -1,0 +1,248 @@
+[data-theme="dark"] {
+  --page-bg: var(--neutral-950);
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  div,
+  span,
+  label,
+  p,
+  input {
+    color: var(--base-white);
+  }
+
+  .btn {
+    &-primary:disabled {
+      background-color: var(--neutral-900);
+      border: 1px solid var(--neutral-800);
+      opacity: 0.6;
+    }
+
+    &-secondary {
+      background-color: unset;
+      color: var(--base-white);
+      border: 1px solid var(--neutral-500);
+
+      &:hover {
+        border: 1px solid var(--neutral-700);
+      }
+
+      &:active {
+        border: 1px solid var(--neutral-900);
+      }
+
+      &:disabled {
+        border: 1px solid var(--neutral-800);
+        opacity: 0.6;
+      }
+    }
+
+    &-tertiary {
+      color: var(--base-white);
+      background-color: unset;
+
+      &:hover {
+        background-color: var(--neutral-700);
+      }
+
+      &:active {
+        background-color: var(--neutral-900);
+      }
+
+      &:disabled {
+        background-color: unset;
+        opacity: 0.6;
+      }
+    }
+  }
+
+  //Card
+  .card,
+  .navigation__primary {
+    border: 1px solid var(--neutral-800);
+    background-color: var(--neutral-900);
+  }
+
+  .navigation__secondary {
+    background-color: var(--neutral-700);
+  }
+
+  .navigation-item {
+    &--primary {
+      &:hover {
+        background-color: var(--neutral-800);
+      }
+
+      &:active {
+        background-color: var(--neutral-700);
+      }
+
+      &.active {
+        background-color: var(--primary-500);
+      }
+    }
+
+    &--secondary {
+      &:hover {
+        background-color: var(--neutral-900);
+      }
+
+      &:active {
+        background-color: var(--primary-600);
+      }
+
+      &.active {
+        background-color: var(--primary-500);
+      }
+    }
+  }
+
+  // Input
+  .control__container {
+    border: 1px solid var(--neutral-800);
+
+    &:not(.focused):not(.disabled):not(.valid):not(.invalid):hover {
+      border: 1px solid var(--neutral-600);
+    }
+
+    &.disabled {
+      background-color: var(--neutral-900);
+      border: 1px solid var(--neutral-800);
+    }
+  }
+
+  input::placeholder {
+    color: var(--neutral-700);
+  }
+}
+
+[data-theme="light"] {
+  --page-bg: var(--neutral-50);
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  div,
+  span,
+  label,
+  p,
+  input {
+    color: var(--base-black);
+  }
+
+  // Buttons
+  .btn {
+    &-primary:disabled {
+      background-color: var(--neutral-200);
+      border: 1px solid var(--neutral-500);
+      color: var(--neutral-900);
+      opacity: 0.6;
+    }
+
+    &-secondary {
+      background-color: unset;
+      border: 1px solid var(--neutral-500);
+
+      &:hover {
+        border: 1px solid var(--neutral-700);
+      }
+
+      &:active {
+        border: 1px solid var(--neutral-900);
+      }
+
+      &:disabled {
+        border: 1px solid var(--neutral-500);
+        color: var(--neutral-900);
+        opacity: 0.6;
+      }
+    }
+
+    &-tertiary {
+      background-color: unset;
+
+      &:hover {
+        background-color: var(--neutral-200);
+      }
+
+      &:active {
+        background-color: var(--neutral-300);
+      }
+
+      &:disabled {
+        background-color: unset;
+        color: var(--neutral-900);
+        opacity: 0.6;
+      }
+    }
+  }
+
+  //Card
+  .card,
+  .navigation__primary {
+    border: 1px solid var(--neutral-500);
+    background-color: var(--neutral-100);
+  }
+
+  .navigation__secondary {
+    background-color: var(--neutral-200);
+  }
+
+  .navigation-item {
+    &--primary {
+      &:hover {
+        background-color: var(--neutral-500);
+      }
+
+      &:active {
+        background-color: var(--neutral-600);
+      }
+
+      &.active {
+        background-color: var(--primary-500);
+        .bi,
+        .navigation-item__label {
+          color: var(--base-white);
+        }
+      }
+    }
+
+    &--secondary {
+      &:hover {
+        background-color: var(--neutral-400);
+      }
+
+      &:active {
+        background-color: var(--neutral-500);
+      }
+
+      &.active {
+        background-color: var(--primary-500);
+        .navigation-item__label {
+          color: var(--base-white);
+        }
+      }
+    }
+  }
+
+  // Input
+  .control__container {
+    border: 1px solid var(--neutral-500);
+
+    &:not(.focused):not(.disabled):not(.valid):not(.invalid):hover {
+      border: 1px solid var(--neutral-700);
+    }
+
+    &.disabled {
+      background-color: var(--neutral-200);
+      border: 1px solid var(--neutral-500);
+    }
+  }
+}

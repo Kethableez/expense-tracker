@@ -1,0 +1,27 @@
+.notifications {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 400px;
+}
+
+@media screen and (max-width: 992px) {
+  .notifications {
+    position: fixed;
+    top: 0;
+    flex-direction: column-reverse;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 993px) {
+  .notifications {
+    padding: 16px;
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    flex-direction: column;
+    width: 400px;
+  }
+}

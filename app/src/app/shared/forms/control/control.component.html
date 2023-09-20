@@ -1,0 +1,38 @@
+<div class="control">
+  <div class="control__heading">
+    <label *ngIf="label" class="control__label" [for]="controlName">
+      {{ label }}
+      <span *ngIf="required" class="control__label--required-mark">*</span>
+    </label>
+    <label *ngIf="!required" class="control__label--optional"> Optional</label>
+  </div>
+  <div
+    class="control__container"
+    [ngClass]="statusClass"
+    [class.focused]="isFocused"
+  >
+    <i class="bi" *ngIf="iconName" [ngClass]="iconName"></i>
+    <input
+      class="control__bare"
+      [id]="controlName"
+      [formControl]="formControl"
+      [type]="controlType"
+      [placeholder]="placeholder"
+      autocomplete="false"
+    />
+    <i
+      class="bi"
+      *ngIf="type === 'password'"
+      [ngClass]="passwordVisible ? 'bi-eye' : 'bi-eye-slash'"
+      (click)="togglePasswordVisibility()"
+    ></i>
+    <i *ngIf="hasErrors" class="bi bi-exclamation-circle-fill"></i>
+    <div class="control__loader" *ngIf="status === 'PENDING'"></div>
+  </div>
+  <ktbz-input-error
+    [@expandCollapse]="areErrorsVisible"
+    *ngIf="areErrorsVisible"
+    [errors]="errors"
+    [keys]="errorKeys"
+  ></ktbz-input-error>
+</div>

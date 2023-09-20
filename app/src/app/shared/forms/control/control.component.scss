@@ -1,0 +1,131 @@
+:host-context {
+  flex-grow: 1;
+  flex-shrink: 0;
+}
+
+@media screen and (min-width: 576px) {
+  .control {
+    gap: 4px;
+    &__heading {
+      padding-inline: 12px;
+    }
+    i {
+      font-size: 20px;
+    }
+
+    &__container {
+      padding: 10px 12px;
+      gap: 8px;
+      border-radius: 10px;
+    }
+
+    &__loader {
+      width: 20px;
+      height: 20px;
+      border: 2px solid var(--neutral-500);
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .control {
+    gap: 2px;
+    &__heading {
+      padding-inline: 8px;
+    }
+    i {
+      font-size: 14px;
+    }
+
+    &__container {
+      padding: 8px 10px;
+      gap: 4px;
+      border-radius: 8px;
+    }
+
+    &__loader {
+      width: 14px;
+      height: 14px;
+      border: 1px solid var(--neutral-500);
+    }
+  }
+}
+
+.control {
+  display: flex;
+  flex-direction: column;
+
+  &__heading {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__label {
+    &--optional {
+      color: var(--neutral-700);
+    }
+
+    &--required-mark {
+      color: var(--error-500);
+    }
+  }
+
+  i {
+    &.bi-exclamation-circle-fill {
+      color: var(--error-500);
+    }
+
+    &:not(.bi-exclamation-circle-fill) {
+      color: var(--neutral-700);
+    }
+  }
+
+  &__container {
+    transition: 0.2s ease-in-out;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    &.focused {
+      border: 1px solid var(--primary-500);
+    }
+
+    &:not(.focused).invalid {
+      border: 1px solid var(--error-500);
+    }
+
+    &:not(.focused).valid {
+      border: 1px solid var(--success-500);
+    }
+
+    &:not(.focused).pending {
+      border: 1px solid var(--error-500);
+    }
+  }
+
+  &__bare {
+    flex-grow: 1;
+    outline: none;
+    border: none;
+  }
+
+  &__loader {
+    align-self: center;
+    border-bottom-color: var(--primary-500);
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+  }
+
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}

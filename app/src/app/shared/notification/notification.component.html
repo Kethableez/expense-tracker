@@ -1,0 +1,14 @@
+<div class="notification" [ngClass]="type">
+  <i class="bi" [ngClass]="statusIcon"></i>
+  <div class="notification__content" [ngClass]="{ 'no-button': !closable }">
+    <div class="notification__header">{{ header }}</div>
+    <div class="notification__message text--justify">{{ message }}</div>
+  </div>
+  <button
+    *ngIf="closable"
+    (click)="close()"
+    class="btn btn--icon btn--small btn-tertiary"
+  >
+    <i class="bi bi-x-lg"></i>
+  </button>
+</div>

@@ -1,0 +1,41 @@
+<nav class="navigation">
+  <div class="navigation__primary">
+    <h5 class="navigation__title">ET</h5>
+    <span class="navigation__spacer--vertical"></span>
+    <div class="navigation__items" *ngIf="isAuthenticated$ | async">
+      <ktbz-navigation-item [item]="item" *ngFor="let item of navigationItems">
+      </ktbz-navigation-item>
+    </div>
+    <span class="navigation__spacer"></span>
+    <span class="navigation__spacer--vertical"></span>
+    <div class="navigation__buttons">
+      <button
+        class="btn btn--small btn--icon btn-secondary"
+        (click)="toggleMode()"
+      >
+        <i class="bi" [ngClass]="modeIcon"></i>
+      </button>
+      <button class="btn btn--small btn--icon btn-secondary">
+        <i class="bi bi-translate"></i>
+      </button>
+      <button
+        *ngIf="isAuthenticated$ | async"
+        class="btn btn--small btn-primary"
+      >
+        <i class="bi bi-box-arrow-in-left"></i>
+      </button>
+    </div>
+  </div>
+  <div
+    class="navigation__secondary"
+    *ngIf="secondLevel$ | async as secondLevel"
+    @expandCollapse
+  >
+    <ktbz-navigation-item
+      [item]="item"
+      [isPrimary]="false"
+      *ngFor="let item of secondLevel"
+    >
+    </ktbz-navigation-item>
+  </div>
+</nav>

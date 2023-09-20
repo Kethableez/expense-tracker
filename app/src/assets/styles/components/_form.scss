@@ -1,0 +1,42 @@
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  &__buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+  }
+
+  &__row {
+    display: grid;
+    gap: 8px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  &__buttons {
+    margin-top: 32px;
+    .btn {
+      flex-grow: 1;
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .form-group__row {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media screen and (min-width: 993px) {
+  .form-group__row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

@@ -1,0 +1,11 @@
+<a
+  class="navigation-item"
+  [routerLink]="routerLink"
+  [routerLinkActive]="'active'"
+  [ngClass]="
+    isPrimary ? 'navigation-item--primary' : 'navigation-item--secondary'
+  "
+>
+  <i *ngIf="item.icon" class="bi" [ngClass]="item.icon"></i>
+  <span class="navigation-item__label"> {{ item.name }} </span>
+</a>

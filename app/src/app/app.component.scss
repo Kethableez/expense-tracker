@@ -1,0 +1,9 @@
+.app-container {
+  width: 100vw;
+  min-height: 100dvh;
+  overflow-y: hidden;
+  background-color: var(--page-bg);
+  background-image: url("../assets/imgs/bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+}

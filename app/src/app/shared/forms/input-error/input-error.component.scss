@@ -1,0 +1,11 @@
+.input-errors {
+  padding-left: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  &__error-message {
+    font: var(--text-paragraph-caption);
+    color: var(--error-500);
+  }
+}

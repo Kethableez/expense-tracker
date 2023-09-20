@@ -1,0 +1,53 @@
+<h2>Sign up</h2>
+<form [formGroup]="signUpForm" class="form-group">
+  <ktbz-control
+    [iconName]="'bi-person-circle'"
+    [label]="'Username'"
+    [control]="signUpForm.controls['username']"
+    placeholder="Enter your username"
+  ></ktbz-control>
+
+  <ktbz-control
+    [iconName]="'bi-at'"
+    [label]="'E-mail'"
+    [control]="signUpForm.controls['email']"
+    placeholder="Enter your e-mail"
+  ></ktbz-control>
+
+  <ktbz-control
+    [iconName]="'bi-person-vcard'"
+    [label]="'Name'"
+    [control]="signUpForm.controls['name']"
+    placeholder="Enter your name"
+  ></ktbz-control>
+
+  <div class="form-group__row">
+    <ktbz-control
+      [iconName]="'bi-shield-lock'"
+      [label]="'Password'"
+      [control]="signUpForm.controls['password']"
+      type="password"
+      placeholder="Enter your password"
+    ></ktbz-control>
+
+    <ktbz-control
+      [iconName]="'bi-shield-lock'"
+      [label]="'Confirm password'"
+      [control]="signUpForm.controls['passwordConfirm']"
+      type="password"
+      placeholder="Confirm your password"
+    ></ktbz-control>
+  </div>
+  <div class="form-group__buttons">
+    <a class="btn btn--medium btn-secondary" [routerLink]="['/auth/sign-in']"
+      >Sign in</a
+    >
+    <button
+      [disabled]="!signUpForm.valid"
+      class="btn btn--medium btn-primary"
+      (click)="signUp()"
+    >
+      Sign up
+    </button>
+  </div>
+</form>

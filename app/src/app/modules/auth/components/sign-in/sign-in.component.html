@@ -1,0 +1,31 @@
+<h2>Sign in</h2>
+<form [formGroup]="signInForm" class="form-group">
+  <ktbz-control
+    [iconName]="'bi-person-circle'"
+    [label]="'Username'"
+    [control]="signInForm.controls['username']"
+    placeholder="Enter your username"
+  ></ktbz-control>
+  <ktbz-control
+    [iconName]="'bi-shield-lock'"
+    [label]="'Passowrd'"
+    [type]="'password'"
+    [control]="signInForm.controls['password']"
+    placeholder="Enter your password"
+  ></ktbz-control>
+  <div class="form-group__buttons">
+    <button
+      class="btn btn--medium btn-secondary"
+      [routerLink]="['/auth/sign-up']"
+    >
+      Sign up
+    </button>
+    <button
+      [disabled]="!signInForm.valid"
+      class="btn btn--medium btn-primary"
+      (click)="signIn()"
+    >
+      Sign in
+    </button>
+  </div>
+</form>

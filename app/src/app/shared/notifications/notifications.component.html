@@ -1,0 +1,11 @@
+<div class="notifications" *ngIf="notifications$ | async as notifications">
+  <ktbz-notification
+    [@slideInOut]="notification"
+    *ngFor="let notification of notifications"
+    [header]="notification.header"
+    [message]="notification.message"
+    [type]="notification.type"
+    [closable]="notification.closable"
+    (onClose)="removeNotification($event)"
+  ></ktbz-notification>
+</div>

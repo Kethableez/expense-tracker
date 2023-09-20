@@ -1,0 +1,31 @@
+<div class="two-cards">
+  <div class="card">
+    <h2>Create new category</h2>
+    <form [formGroup]="categoryForm" class="form-group col-12">
+      <ktbz-control
+        [required]="true"
+        label="Category name"
+        [control]="categoryForm.controls['name']"
+      ></ktbz-control>
+      <ktbz-control
+        [required]="true"
+        label="Icon"
+        [control]="categoryForm.controls['icon']"
+      ></ktbz-control>
+      <div class="form-group__buttons">
+        <button class="btn btn-primary btn--medium" (click)="onCreate()">
+          Create new
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <div class="card">
+    <h2>Available categories</h2>
+    <div class="category-list" *ngIf="categories$ | async as categories">
+      <span class="category-badge" *ngFor="let category of categories">
+        {{ category["icon"] }} {{ category["name"] }}</span
+      >
+    </div>
+  </div>
+</div>

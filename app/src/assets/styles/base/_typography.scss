@@ -1,0 +1,136 @@
+:root {
+  --text-base: "Manrope", sans-serif;
+  --text-display: "Playfair Display", serif;
+
+  --text-display-large: 600 96px/112px var(--text-display);
+  --text-display-medium: 600 52px/84px var(--text-display);
+  --text-display-small: 500 44px/52px var(--text-display);
+
+  --text-label-large: 500 20px/24px var(--text-base);
+  --text-label-medium: 500 16px/20px var(--text-base);
+  --text-label-small: 500 14px/16px var(--text-base);
+  --text-label-caption: 500 12px/14px var(--text-base);
+
+  --text-paragraph-large: 400 18px/32px var(--text-base);
+  --text-paragraph-medium: 400 16px/28px var(--text-base);
+  --text-paragraph-small: 400 14px/24px var(--text-base);
+  --text-paragraph-caption: 400 11px/16px var(--text-base);
+
+  --text-heading-1: 600 48px/60px var(--text-base);
+  --text-heading-2: 600 40px/48px var(--text-base);
+  --text-heading-3: 600 32px/44px var(--text-base);
+  --text-heading-4: 600 28px/36px var(--text-base);
+  --text-heading-5: 600 24px/32px var(--text-base);
+  --text-heading-6: 600 20px/28px var(--text-base);
+}
+
+.text {
+  &--regular {
+    font-weight: 400;
+  }
+
+  &--medium {
+    font-weight: 500;
+  }
+
+  &--semibold {
+    font-weight: 600;
+  }
+
+  &--bold {
+    font-weight: 700;
+  }
+
+  &--center {
+    text-align: center;
+  }
+
+  &--justify {
+    text-align: justify;
+  }
+}
+
+.display {
+  font: var(--text-display-medium);
+
+  &--large {
+    font: var(--text-display-large);
+  }
+
+  &--small {
+    font: var(--text-display-small);
+  }
+}
+
+.label {
+  margin: 0;
+  font: var(--text-label-medium);
+
+  &--large {
+    margin: 0;
+    font: var(--text-label-large);
+  }
+
+  &--small {
+    margin: 0;
+    font: var(--text-label-small);
+  }
+
+  &--caption {
+    margin: 0;
+    font: var(--text-label-caption);
+  }
+}
+
+.paragraph {
+  margin: 0;
+  font: var(--text-paragraph-medium);
+
+  &--large {
+    margin: 0;
+
+    font: var(--text-paragraph-large);
+  }
+
+  &--small {
+    margin: 0;
+
+    font: var(--text-paragraph-small);
+  }
+
+  &--caption {
+    margin: 0;
+
+    font: var(--text-paragraph-caption);
+  }
+}
+
+h1 {
+  font: var(--text-heading-1);
+  letter-spacing: 5%;
+  margin-bottom: 28px;
+}
+
+h2 {
+  font: var(--text-heading-2);
+  letter-spacing: 3%;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font: var(--text-heading-3);
+  letter-spacing: 1%;
+  margin-bottom: 16px;
+}
+
+h4 {
+  font: var(--text-heading-4);
+}
+
+h5 {
+  font: var(--text-heading-5);
+}
+
+h6 {
+  font: var(--text-heading-6);
+}
